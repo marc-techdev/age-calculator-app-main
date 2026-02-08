@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body
+    class="bg-grey-100 font-poppins flex min-h-screen items-center justify-center py-10 px-4"
+  >
+    <main
+      class="bg-white w-full max-w-[343px] rounded-t-[24px] rounded-bl-[24px] rounded-br-[100px] p-6 pb-12 shadow-sm md:max-w-[840px] md:p-14 md:pb-14 md:rounded-br-[200px]"
+    >
+      <!-- Input Section -->
+      <form
+        id="age-form"
+        class="flex gap-4 md:gap-8 border-b border-grey-200 pb-16 md:pb-12 relative mb-10 md:mb-6"
+        novalidate
+      >
+        <!-- Day -->
+        <div class="flex flex-col gap-1 w-[88px] md:w-[160px]">
+          <label
+            for="day"
+            class="text-grey-500 text-[12px] md:text-[14px] font-bold tracking-[0.2em] uppercase transition-colors duration-200"
+            id="label-day"
+            >Day</label
+          >
+          <input
+            type="number"
+            id="day"
+            name="day"
+            placeholder="DD"
+            class="w-full border border-grey-200 rounded-lg text-[20px] md:text-[32px] font-bold px-4 py-3 md:px-6 md:py-3 text-black placeholder:text-grey-500 focus:outline-none focus:border-purple-500 focus:caret-purple-500 transition-colors duration-200 cursor-pointer"
+          />
+          <p
+            class="text-red-400 text-[10px] md:text-[14px] italic hidden"
+            id="error-day"
+          ></p>
+        </div>
+
+        <!-- Month -->
+        <div class="flex flex-col gap-1 w-[88px] md:w-[160px]">
+          <label
+            for="month"
+            class="text-grey-500 text-[12px] md:text-[14px] font-bold tracking-[0.2em] uppercase transition-colors duration-200"
+            id="label-month"
+            >Month</label
+          >
+          <input
+            type="number"
+            id="month"
+            name="month"
+            placeholder="MM"
+            class="w-full border border-grey-200 rounded-lg text-[20px] md:text-[32px] font-bold px-4 py-3 md:px-6 md:py-3 text-black placeholder:text-grey-500 focus:outline-none focus:border-purple-500 focus:caret-purple-500 transition-colors duration-200 cursor-pointer"
+          />
+          <p
+            class="text-red-400 text-[10px] md:text-[14px] italic hidden"
+            id="error-month"
+          ></p>
+        </div>
+
+        <!-- Year -->
+        <div class="flex flex-col gap-1 w-[88px] md:w-[160px]">
+          <label
+            for="year"
+            class="text-grey-500 text-[12px] md:text-[14px] font-bold tracking-[0.2em] uppercase transition-colors duration-200"
+            id="label-year"
+            >Year</label
+          >
+          <input
+            type="number"
+            id="year"
+            name="year"
+            placeholder="YYYY"
+            class="w-full border border-grey-200 rounded-lg text-[20px] md:text-[32px] font-bold px-4 py-3 md:px-6 md:py-3 text-black placeholder:text-grey-500 focus:outline-none focus:border-purple-500 focus:caret-purple-500 transition-colors duration-200 cursor-pointer"
+          />
+          <p
+            class="text-red-400 text-[10px] md:text-[14px] italic hidden"
+            id="error-year"
+          ></p>
+        </div>
+
+        <!-- Button (Absolute positioned on the border line) -->
+        <div
+          class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 md:left-auto md:right-0 md:translate-x-0"
+        >
+          <button
+            type="submit"
+            class="bg-purple-500 hover:bg-black rounded-full p-4 md:p-5 transition-colors duration-300 flex items-center justify-center w-16 h-16 md:w-24 md:h-24"
+          >
+            <img
+              src="assets/images/icon-arrow.svg"
+              alt="Calculate Age"
+              class="w-6 h-6 md:w-10 md:h-10"
+            />
+          </button>
+        </div>
+      </form>
+
+      <!-- Output Section -->
+      <div class="flex flex-col pt-8 md:pt-4">
+        <div
+          class="flex items-center gap-2 italic font-extrabold text-[56px] md:text-[104px] leading-[1.1]"
+        >
+          <span class="text-purple-500" id="result-years">--</span>
+          <span class="text-black">years</span>
+        </div>
+        <div
+          class="flex items-center gap-2 italic font-extrabold text-[56px] md:text-[104px] leading-[1.1]"
+        >
+          <span class="text-purple-500" id="result-months">--</span>
+          <span class="text-black">months</span>
+        </div>
+        <div
+          class="flex items-center gap-2 italic font-extrabold text-[56px] md:text-[104px] leading-[1.1]"
+        >
+          <span class="text-purple-500" id="result-days">--</span>
+          <span class="text-black">days</span>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
